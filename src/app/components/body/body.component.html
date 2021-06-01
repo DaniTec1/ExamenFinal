@@ -4,28 +4,33 @@
       <h1>formulario</h1>
       <div class="card">
         <div class="card-heder">
-          <img src="../../../assets/tec.png" height="240em" />
+          <img src="../../../assets/tec.png" height="200vh" />
         </div>
         <div class="card-body">
           <div class="form-floating mb-3">
             <input
+              [(ngModel)]="nuevoNombre"
               type="text"
               class="form-control"
               id="floatingInput"
+              placeholder="Nombre"
             />
-            <label for="floatingInput">Nombre</label>
+            <label for="floatingInput" >Nombre</label>
           </div>
+          <button class="btn btn-outline-primary" (click)="addName()">
+            Agregar
+          </button>
         </div>
       </div>
     </div>
     <!-- Segunda Columna -->
     <div class="col-md-5">
       <h2>Lista de Chamacos</h2>
-        <ng-container *ngIf="lista.length">
-          <ul>
-            <li *ngFor="let item of lista" class="h4">{{item}}</li>
-          </ul>
-        </ng-container>
+      <ng-container *ngIf="lista.length">
+        <ul>
+          <li *ngFor="let item of lista" class="h4">{{ item }}</li>
+        </ul>
+      </ng-container>
     </div>
   </div>
 </div>
