@@ -3,11 +3,12 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
-  styleUrls: ['./body.component.scss']
+  styleUrls: ['./body.component.css']
 })
 export class BodyComponent implements OnInit {
-  lista:Array<string> = ["Daniel","Joaquin","Arturo"]
-  nuevoNombre: string = "";
+  lista:Array<string> = []
+  nuevoNombre: string = ""
+  estilo:string = "h3"
   
   constructor() { }
 
@@ -16,6 +17,9 @@ export class BodyComponent implements OnInit {
   }
   
   addName(){
+    if(this.lista.length > 3){
+      this.estilo = "azul h4"
+    }
     if(this.lista.length < 10){
       this.lista.push(this.nuevoNombre)
       this.nuevoNombre = ""
