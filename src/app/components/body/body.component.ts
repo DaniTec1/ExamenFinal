@@ -18,7 +18,7 @@ export class BodyComponent implements OnInit {
   
   addName(){
     if(this.lista.length > 3){
-      this.estilo = "azul h4"
+      this.estilo = "azul h1"
     }
     if(this.lista.length < 10){
       this.lista.push(this.nuevoNombre)

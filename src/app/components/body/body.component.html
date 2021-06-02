@@ -1,10 +1,10 @@
 <div class="container">
   <div class="row my-5">
     <div class="col-md-7">
-      <h1>Registro</h1>
+      <h1 [ngClass]="estilo">Oscar Daniel Rosas Martinez</h1>
       <div class="card">
         <div class="card-heder">
-          <img src="../../../assets/tec.png" height="150vh" class="mx-4"/>
+          <h2 class="mt-4 text-center">Formulario</h2>
         </div>
         <div class="card-body">
           <div class="form-floating mb-3">
@@ -26,9 +26,9 @@
     <!-- Segunda Columna -->
     <div class="col-md-5">
       <ng-container *ngIf="lista.length">
-        <ul [ngClass]="estilo">
-          <h2>Lista de Alumnos</h2>
-          <li *ngFor="let item of lista">{{ item }}</li>
+        <ul>
+          <h3>Lista de Alumnos</h3>
+          <li class="h3" *ngFor="let item of lista">{{ item }}</li>
         </ul>
       </ng-container>
     </div>
